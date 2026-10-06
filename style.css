@@ -1,0 +1,55 @@
+body{
+    position: relative;
+display: flex;
+height:100dvh;
+justify-content: center;
+align-items: center;
+}
+
+div{position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    animation: forwards 2s ease-in-out;
+   
+  
+}
+
+#esquerda{
+background-color: rgb(255, 0, 0); animation: forwards subir 2s ease-out;
+animation-name: esquerda;
+}
+#direita{
+    background-color: rgb(0, 0, 255);animation: forwards descer 2s ease-out;
+    animation-name: direita;
+
+}
+
+@keyframes esquerda {
+    0%{
+        transform: scale(0) translateX(-400px);
+    }
+    25%{
+        transform: scale(1) translateX(-400px);
+    }
+    75%{
+        transform: scale(1.5)translateX(-400px); 
+    }
+    100%{
+        transform: translateX(0); opacity: 60%;
+    }
+}
+@keyframes direita{
+    0%{
+        transform:scale(0) translateX(400px);
+    }
+    25%{
+        transform: scale(1) translateX(400px);
+    }
+    75%{
+        transform: scale(1.5)translateX(400px); 
+    }
+    100%{
+        transform: translateX(0);opacity: 60%;
+    }
+}
